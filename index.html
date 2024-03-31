@@ -18,19 +18,23 @@
         </div>
         <p class="mt-3">生年月日</p>
         <div>
-            <input type='date' class="form-control w-100 mt-1" name="udetate" required>
+            <input type='date' class="form-control w-100 mt-1" name="birthday" required>
+        </div>
+        <p class="mt-3">郵便番号</p>
+        <div>
+            <input class="form-control w-100 mt-1" name="postnumber" required>
         </div>
         <p class="mt-3">住所</p>
         <div>
-            <input class="form-control w-100 mt-1" name="fukkin" required>
+            <input class="form-control w-100 mt-1" name="address" required>
         </div>
         <p class="mt-3">電話番号</p>
         <div>
-            <input type='tel' class="form-control w-100 mt-1" name="haikin" required>
+            <input type='tel' class="form-control w-100 mt-1" name="tel" required>
         </div>
         <p class="mt-3">マイナンバー</p>
         <div>
-            <input class="form-control w-100 mt-1" name="sukuwat" required>
+            <input class="form-control w-100 mt-1" name="mynumber" required>
         </div>
         <input type="submit" class="mt-4 btn btn-primary" value="送信">
     </form>
@@ -74,10 +78,11 @@
         $(function () {
             $('form').submit(function () {
                 const name    = $('input[name="name"]').val();
-                const udetate = $('input[name="udetate"]').val();
-                const fukkin  = $('input[name="fukkin"]').val();
-                const haikin  = $('input[name="haikin"]').val();
-                const sukuwat = $('input[name="sukuwat"]').val();
+                const udetate = $('input[name="birthday"]').val();
+                const udetate = $('input[name="postnumber"]').val();
+                const fukkin  = $('input[name="address"]').val();
+                const haikin  = $('input[name="tel"]').val();
+                const sukuwat = $('input[name="mynumber"]').val();
                 const msg = `${name}\n${udetate}\n${fukkin}\n${haikin}\n${sukuwat}`;
                 sendText(msg);
                 return false;
